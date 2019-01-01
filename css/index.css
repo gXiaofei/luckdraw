@@ -1,0 +1,106 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.bgImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 1366px;
+  min-height: 768px;
+  z-index: -10;
+  zoom: 1;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  min-width: 1366px;
+  overflow: hidden;
+  display: flex;
+}
+.main .lotteryArea {
+  width: 50%;
+  margin-top: 236px;
+  height: 462px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotatey(0);
+}
+.main .lotteryArea .img {
+  width: 200px;
+  height: 270px;
+  position: absolute;
+  right: 33%;
+  top: 19%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 500px #8b43c6;
+  overflow: hidden;
+}
+.main .lotteryArea .img:before {
+  content: '';
+  position: absolute;
+  left: -155px;
+  width: 20px;
+  height: 100%;
+  background: #fff;
+  opacity: 0.4;
+  transform: skewX(45deg);
+}
+.main .lotteryArea .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.main .lotteryArea .img:hover:before {
+  transition: all 1s;
+  left: 333px;
+}
+.main .lotteryArea .btnStart {
+  position: absolute;
+  right: 45.15%;
+  bottom: 8%;
+}
+.main .lotteryArea .btnStart button {
+  padding: 0;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background: #f1cb76;
+  border-style: inherit;
+  cursor: pointer;
+  color: #ed574b;
+  font-weight: bold;
+}
+.main .lotteryArea .btnStart button:focus {
+  outline: none;
+}
+.main .listArea {
+  padding: 60px 0 0 70px;
+  box-sizing: border-box;
+  width: 50%;
+  margin-top: 236px;
+  height: 462px;
+}
+.main .listArea .listItem {
+  height: 60px;
+  display: flex;
+}
+.main .listArea .listItem .listLabel {
+  font-size: 20px;
+  font-weight: bold;
+}
+.main .listArea .listItem .winners {
+  width: 65%;
+}
+.main .listArea .listItem .winners span {
+  margin-left: 10px;
+  display: inline-block;
+}

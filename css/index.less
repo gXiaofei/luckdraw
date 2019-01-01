@@ -1,0 +1,116 @@
+body{
+   width: 100vw;
+   height: 100vh;
+}
+
+.bgImg{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    min-width: 1366px;
+    min-height: 768px;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    min-width: 1366px;
+    overflow: hidden;
+    display: flex;
+    // 抽奖区域
+    .lotteryArea{
+        width: 50%;
+        margin-top: 236px;
+        height: 462px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotatey(0);
+        .img{
+            width: 200px;
+            height: 270px;
+            position: absolute;
+            right: 33%;
+            top: 19%;
+            border-radius: 5px;
+            // box-shadow:0px 0px 200px #fff;
+            // box-shadow:0px 0px 200px #4da79c;
+            box-shadow:0px 0px 500px #8b43c6;
+            // box-shadow:0px 0px 500px #aa9041;
+            // box-shadow:0px 0px 500px #80180e;
+            // box-shadow:0px 0px 500px #80180e;
+            overflow: hidden;
+            &:before{
+                content: '';
+                position: absolute;
+                left: -155px;
+                width: 20px;
+                height: 100%;
+                background: #fff;
+                opacity: 0.4;
+                transform: skewX(45deg);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+            }
+        }
+        .img:hover{
+            &:before{
+                transition: all 1s;
+                left: 333px;
+            }
+        }
+        .btnStart{
+            position: absolute;
+            right: 45.15%;
+            bottom: 8%;
+            button{
+                padding: 0;
+                height: 38px;
+                width: 38px;
+                border-radius: 50%;
+                background: #f1cb76;
+                border-style: inherit;
+                cursor: pointer;
+                color: #ed574b;
+                font-weight: bold;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+    // 获奖名单
+    .listArea{
+        padding: 60px 0 0 70px;
+        box-sizing: border-box;
+        width: 50%;
+        margin-top: 236px;
+        height: 462px;
+        .listItem{
+            height: 60px;
+            display: flex;
+            .listLabel{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .winners{
+                width: 65%;
+                span{
+                    margin-left: 10px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
